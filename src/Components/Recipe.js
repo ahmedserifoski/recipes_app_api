@@ -17,7 +17,7 @@ class Recipe extends React.Component{
         const response = await fetch(example_link)
         const recipeData = await response.json() 
         this.setState({ activeRecipe: recipeData.hits[0].recipe})
-        console.log(this.state.activeRecipe)
+        // console.log(this.state.activeRecipe)
     }
 
     render() {

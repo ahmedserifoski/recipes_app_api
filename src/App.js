@@ -21,7 +21,7 @@ class App extends Component {
     const res = await fetch(example_link)
     const data = await res.json()
     this.setState( {recipes: data.hits} )
-    console.log(this.state.recipes)
+    // console.log(this.state.recipes)
   }
 
   getRandomRecipe = async() => {
@@ -31,7 +31,7 @@ class App extends Component {
     const res = await fetch(example_link)
     const data = await res.json()
     this.setState( {recipes: data.hits} )
-    console.log(this.state.recipes)
+    
   }
 
   componentDidMount = () => {
