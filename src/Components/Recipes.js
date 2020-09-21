@@ -16,7 +16,7 @@ const Recipes = (props) => {
                                     alt={recipe.label}
                                 />
                                 <div className="recipe__text">
-                                <h5 className="recipes__title">{recipe.label.length < 20 ? `${recipe.label}` : `${recipe.label.substring(0, 25)}...` }</h5>
+                                <h5 className="recipes__title">{recipe.label.length < 15 ? `${recipe.label}` : `${recipe.label.substring(0, 20)}...` }</h5>
                                 <button className="recipe_buttons">
                                     <Link to={{
                                         pathname:`/recipe/${recipe.totalWeight}`,
