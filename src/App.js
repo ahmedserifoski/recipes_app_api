@@ -24,29 +24,28 @@ class App extends Component {
     console.log(this.state.recipes)
   }
 
-  // getRandomRecipe = async() => {
+  getRandomRecipe = async() => {
     
-  //   const example_link = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=burger
-  //   `
-  //   const res = await fetch(example_link)
-  //   const data = await res.json()
-  //   this.setState( {recipes: data.hits} )
-  //   console.log(this.state.recipes)
-  // }
+    const example_link = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=random
+    `
+    const res = await fetch(example_link)
+    const data = await res.json()
+    this.setState( {recipes: data.hits} )
+    console.log(this.state.recipes)
+  }
 
-  // componentDidMount = () => {
-  //   this.getRandomRecipe()
-  //   const json = localStorage.getItem("recipes")
-  //   const recipes = JSON.parse(json)
-  //   this.setState({ recipes })
+  componentDidMount = () => {
+    this.getRandomRecipe()
+    // const json = localStorage.getItem("recipes")
+    // const recipes = JSON.parse(json)
+    // this.setState({ recipes })
     
-    
-  // }
+  }
 
-  // componentDidUpdate = () => {
-  //   const recipes = JSON.stringify(this.state.recipes)
-  //   localStorage.setItem("recipes", recipes)
-  // }
+  componentDidUpdate = () => {
+    const recipes = JSON.stringify(this.state.recipes)
+    localStorage.setItem("recipes", recipes)
+  }
 
   render() {
     return(
