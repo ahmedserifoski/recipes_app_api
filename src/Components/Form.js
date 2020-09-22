@@ -7,7 +7,7 @@ const Form = ( {getRecipe }) => {
                 <input
                     type="text"
                     name="recipeName"
-                    placeholder="Recipe"
+                    placeholder="Recipenpm"
                     className="form__input"
                  />
                 <button className="form__button">Search</button>
