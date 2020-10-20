@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import Spinner from "./Spinner"
 
 const Recipes = (props) => {
     return (
+        
         <div className="container">
-            <div className="row">
+            {props.isLoading ? <Spinner /> : <div className="row">
                 {props.recipes.map(oneRecipe => {
                     const recipe = oneRecipe.recipe
                     return (
@@ -28,7 +30,12 @@ const Recipes = (props) => {
                         </div>
                     )
                 })}
-            </div>
+            </div>}
+                
+            
+                
+            
+            
             
         </div>
     )
