@@ -26,7 +26,7 @@ class App extends Component {
 
   getRandomRecipe = async() => {
     
-    const example_link = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=random
+    const example_link = `https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?app_id=${API_ID}&app_key=${API_KEY}&q=burger
     `
     const res = await fetch(example_link)
     const data = await res.json()
